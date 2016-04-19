@@ -1,0 +1,14 @@
+logging:
+  org.springframework: info
+  rabbit: info
+
+spring:
+  application:
+    routing:
+      key: demo.key
+    inbound:
+      queue: demo.inbound.queue
+      exchange: demo.inbound.exchange
+    outbound:
+      queue: demo.outbound.queue
+      exchange: demo.outbound.exchange
