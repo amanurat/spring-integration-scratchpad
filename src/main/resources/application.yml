@@ -12,3 +12,6 @@ spring:
     outbound:
       queue: demo.outbound.queue
       exchange: demo.outbound.exchange
+
+server:
+  port: 9091
