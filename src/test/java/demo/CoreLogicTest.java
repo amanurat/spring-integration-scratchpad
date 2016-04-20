@@ -1,6 +1,6 @@
 package demo;
 
-import demo.processing.CoreBusinessLogic;
+import demo.logic.BusinessLogic;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,6 +12,6 @@ public class CoreLogicTest {
 
     @Test
     public void testBusinessLogic(){
-        assertEquals("**** A ****", CoreBusinessLogic.doSomeWork("a"));
+        assertEquals("**** A ****", BusinessLogic.doSomeWork("a"));
     }
 }

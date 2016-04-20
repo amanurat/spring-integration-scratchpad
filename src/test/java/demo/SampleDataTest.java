@@ -4,8 +4,11 @@ import demo.config.DemoOutboundMessageGateway;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.ConfigFileApplicationContextInitializer;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.UUID;
@@ -19,6 +22,13 @@ public class SampleDataTest {
 
     @Test
     public void sendTestData() throws Exception {
-        demoOutboundMessageGateway.sendMessage(UUID.randomUUID().toString());
+            demoOutboundMessageGateway.sendMessage(UUID.randomUUID().toString());
+    }
+
+    @Configuration
+    @EnableAutoConfiguration
+    @ComponentScan("config")
+    public static class TestConfig {
+
     }
 }

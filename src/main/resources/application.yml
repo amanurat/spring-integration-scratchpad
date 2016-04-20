@@ -1,6 +1,8 @@
 logging:
-  org.springframework: info
-  demo: info
+  level:
+    org.springframework.integration: 'DEBUG'
+    org.springframework.integration.handler.LoggingHandler: 'INFO'
+    demo: 'INFO'
 
 spring:
   application:

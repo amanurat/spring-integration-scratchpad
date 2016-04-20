@@ -10,12 +10,12 @@ import org.springframework.messaging.MessageChannel;
  * Created by BWilcock on 20/04/2016.
  */
 @Configuration
-public class ChannelConfig {
+public class InternalChannels {
 
     @Bean()
     @Description("Used internally to process messages")
     public MessageChannel processingChannel() {
-        return MessageChannels.direct().get();
+        return MessageChannels.direct().interceptor().get();
     }
 
     @Bean()
@@ -24,5 +24,10 @@ public class ChannelConfig {
         return MessageChannels.direct().get();
     }
 
+//    @ServiceActivator(inputChannel = "logging")
+//    @Bean
+//    public LoggingHandler loggingHandler() {
+//        return new LoggingHandler("INFO");
+//    }
 
 }
