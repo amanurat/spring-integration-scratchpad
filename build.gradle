@@ -30,8 +30,8 @@ dependencies {
     compile "org.springframework.integration:spring-integration-core:+"
     compile "org.springframework.integration:spring-integration-amqp:+"
     compile "org.springframework.integration:spring-integration-java-dsl:+"
-    compile "org.springframework.boot:spring-boot-starter-jetty:+"
-    compile 'org.springframework.boot:spring-boot-starter-web:+'
+    //compile "org.springframework.boot:spring-boot-starter-jetty:+"
+    //compile 'org.springframework.boot:spring-boot-starter-web:+'
     //compile "com.google.guava:guava:+"
     //compile "io.projectreactor:reactor-stream:+"
     //compile "io.projectreactor.spring:reactor-spring-context:+"

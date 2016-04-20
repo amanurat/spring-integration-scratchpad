@@ -1,6 +1,6 @@
 # spring-integration-scratchpad
 
-Requires a default istallation of rabbit mq.
+Requires a default istallation of demo mq.
 
 You can start the demo from the command line in the root folder using the command:-
 

@@ -1,4 +1,4 @@
-package rabbit.config.processing;
+package demo.processing;
 
 /**
  * Created by ben on 07/04/16.
@@ -6,6 +6,6 @@ package rabbit.config.processing;
 public class CoreBusinessLogic {
 
     public static String doSomeWork(String message){
-        return message.toUpperCase();
+        return "**** " +message.toUpperCase() + " ****";
     }
 }

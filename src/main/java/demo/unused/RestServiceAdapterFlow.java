@@ -1,23 +1,13 @@
-package rabbit.config.unused;
-
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.integration.annotation.IntegrationComponentScan;
-import org.springframework.integration.dsl.IntegrationFlow;
-import org.springframework.integration.dsl.IntegrationFlows;
-import org.springframework.integration.dsl.http.Http;
-import rabbit.config.processing.CoreBusinessLogic;
-
-import java.util.List;
+package demo.unused;
 
 /**
  * Created by ben on 07/04/16.
  */
-@SpringBootApplication
-@IntegrationComponentScan
+//@SpringBootApplication
+//@IntegrationComponentScan
 public class RestServiceAdapterFlow {
 
-
+/*
     @Bean
     public IntegrationFlow restServiceProxyFlow() {
         return IntegrationFlows
@@ -28,7 +18,7 @@ public class RestServiceAdapterFlow {
                 .get();
     }
 
-/*
+
     @Bean
     public IntegrationFlow publicFmeServiceFlow() {
         return IntegrationFlows

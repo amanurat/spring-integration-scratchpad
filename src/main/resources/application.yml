@@ -1,6 +1,6 @@
 logging:
   org.springframework: info
-  rabbit: info
+  demo: info
 
 spring:
   application:
