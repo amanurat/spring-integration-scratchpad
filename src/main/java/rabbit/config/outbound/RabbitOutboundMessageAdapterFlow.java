@@ -1,4 +1,4 @@
-package rabbit.config;
+package rabbit.config.outbound;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +10,7 @@ import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.amqp.Amqp;
 import org.springframework.integration.dsl.channel.MessageChannels;
+import rabbit.config.RabbitConfig;
 
 @Configuration
 public class RabbitOutboundMessageAdapterFlow {

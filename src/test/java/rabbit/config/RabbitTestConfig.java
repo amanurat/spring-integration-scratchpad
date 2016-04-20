@@ -12,16 +12,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-@Configuration
+//@Configuration
 public class RabbitTestConfig {
-
+/*
     @Autowired
     private ConnectionFactory rabbitConnectionFactory;
 
     @Autowired
     private RabbitConfig rabbitConfig;
 
-    @Value("${spring.application.exchange.name}")
+    @Value("${spring.application.inbound.exchange}")
     private String exchangeName;
 
     @Value("${spring.application.routing.key}")
@@ -34,8 +34,8 @@ public class RabbitTestConfig {
 
 
     @Bean
-    Binding sampleBinding(DirectExchange sampleExchange, Queue sampleQueue) {
-        return BindingBuilder.bind(rabbitConfig.inboundQueue()).to(sampleExchange).with(routingKey);
+    Binding sampleBinding(DirectExchange inboundExchange, Queue inboundQueue) {
+        return BindingBuilder.bind(inboundQueue).to(inboundExchange).with(routingKey);
     }
 
     @Bean
@@ -47,4 +47,5 @@ public class RabbitTestConfig {
         r.setRoutingKey(routingKey);
         return r;
     }
+    */
 }

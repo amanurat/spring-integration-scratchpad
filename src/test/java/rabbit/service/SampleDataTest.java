@@ -8,9 +8,10 @@ import org.springframework.boot.test.ConfigFileApplicationContextInitializer;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import rabbit.Application;
+
+import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class, initializers = ConfigFileApplicationContextInitializer.class)
@@ -18,13 +19,11 @@ import rabbit.Application;
 public class SampleDataTest {
 
     @Autowired
-    private SampleGateway sampleGateway;
+    private TestMessageGateway testMessageGateway;
 
     @Test
-    public void populateTestData() throws Exception {
-        for (int i = 0; i < 10; i++) {
-            this.sampleGateway.sendMessage("Test Message " + i);
-        }
+    public void sendTestData() throws Exception {
+        this.testMessageGateway.sendMessage("Test Message ID: " + UUID.randomUUID().toString());
     }
 
     @Configuration

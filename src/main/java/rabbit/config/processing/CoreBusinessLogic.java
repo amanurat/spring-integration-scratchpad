@@ -1,4 +1,4 @@
-package rabbit.logic;
+package rabbit.config.processing;
 
 /**
  * Created by ben on 07/04/16.
@@ -6,6 +6,6 @@ package rabbit.logic;
 public class CoreBusinessLogic {
 
     public static String doSomeWork(String message){
-        return "Upper-cased message: " + message.toUpperCase();
+        return message.toUpperCase();
     }
 }

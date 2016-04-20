@@ -1,4 +1,4 @@
-package rabbit.config;
+package rabbit.config.unused;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -6,7 +6,7 @@ import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.http.Http;
-import rabbit.logic.CoreBusinessLogic;
+import rabbit.config.processing.CoreBusinessLogic;
 
 import java.util.List;
 

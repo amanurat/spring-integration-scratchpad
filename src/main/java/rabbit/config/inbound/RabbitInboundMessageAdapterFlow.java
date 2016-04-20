@@ -1,4 +1,4 @@
-package rabbit.config;
+package rabbit.config.inbound;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,9 @@ import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.amqp.Amqp;
 import org.springframework.integration.dsl.support.Transformers;
-import rabbit.logic.CoreBusinessLogic;
+import rabbit.config.RabbitConfig;
+import rabbit.config.outbound.OnwardMessageGateway;
+import rabbit.config.processing.CoreBusinessLogic;
 
 @Configuration
 public class RabbitInboundMessageAdapterFlow {
@@ -25,7 +27,7 @@ public class RabbitInboundMessageAdapterFlow {
     private ConnectionFactory connectionFactory;
 
     @Autowired
-    private MessageGateway messageGateway;
+    private OnwardMessageGateway onwardMessageGateway;
 
     @Autowired
     private Environment environment;
@@ -49,7 +51,7 @@ public class RabbitInboundMessageAdapterFlow {
                     logger.info("Received  message: '{}'", message);
                     message = CoreBusinessLogic.doSomeWork(message);
                     logger.info("Processed message to: '{}'", message);
-                    messageGateway.sendMessage(message);
+                    onwardMessageGateway.sendMessage(message);
                     logger.info("Sent message: '{}'", message);
                 })
 //                .handleWithAdapter(a ->

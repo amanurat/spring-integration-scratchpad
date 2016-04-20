@@ -1,10 +1,10 @@
-package rabbit.config;
+package rabbit.service;
 
 import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.MessagingGateway;
 
 @MessagingGateway
-public interface MessageGateway {
-    @Gateway(requestChannel = "message.send.channel")
+public interface TestMessageGateway {
+    @Gateway(requestChannel = "launch.message.input.channel")
     void sendMessage(String message);
 }
