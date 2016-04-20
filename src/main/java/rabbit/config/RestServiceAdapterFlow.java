@@ -6,6 +6,7 @@ import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.http.Http;
+import rabbit.logic.CoreBusinessLogic;
 
 import java.util.List;
 

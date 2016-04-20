@@ -1,4 +1,4 @@
-package rabbit.config;
+package rabbit.logic;
 
 /**
  * Created by ben on 07/04/16.

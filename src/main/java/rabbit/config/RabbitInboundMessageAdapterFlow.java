@@ -12,6 +12,7 @@ import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.amqp.Amqp;
 import org.springframework.integration.dsl.support.Transformers;
+import rabbit.logic.CoreBusinessLogic;
 
 @Configuration
 public class RabbitInboundMessageAdapterFlow {
@@ -45,10 +46,11 @@ public class RabbitInboundMessageAdapterFlow {
                 .transform(Transformers.objectToString())
                 .handle((m) -> {
                     String message = m.getPayload().toString();
-                    logger.info("Received  {}", message);
-                    logger.info("Processed {}", message);
+                    logger.info("Received  message: '{}'", message);
+                    message = CoreBusinessLogic.doSomeWork(message);
+                    logger.info("Processed message to: '{}'", message);
                     messageGateway.sendMessage(message);
-                    logger.info("Sent {}", message);
+                    logger.info("Sent message: '{}'", message);
                 })
 //                .handleWithAdapter(a ->
 //                        a.httpGateway(m ->
