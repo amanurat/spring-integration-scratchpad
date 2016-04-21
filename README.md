@@ -23,6 +23,11 @@ INFO 14000 --- [cTaskExecutor-1] demo.logic.BusinessLogic: Processing message 0:
 INFO 14000 --- [cTaskExecutor-1] demo.logic.BusinessLogic: Processed message is: **** (0) HELLO! ****
 ```
 
+### REST API
+
+The demo also allows you to utilise the same message processing feature via a RESTful service interface. To use it just point your browser at [http://localhost:9091/demo?message=Hello!](http://localhost:9091/demo?message=Hello!) and you'll see the response `**** (0) HELLO! ****` in your browser window.
+
+
 # Code Walkthrough
 
 The code used by the Java DSL to configure spring integration is fairly compact, and where appropriate you may like specify behaviours within the configuration using Lambda expressions. This can help to reduce the proliferation of implementation classes within your codebase as you add or leverage spring integration's various features.
